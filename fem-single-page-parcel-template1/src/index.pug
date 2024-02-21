@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html.antialised.overflow-x-hidden(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+
+        meta(name="theme-color" content="#0B0D17")
+        meta(name="author" content="<your name> - implementation, frontendmentor.io - design")
+        meta(name="description" content="A solution to the frontendmentor.io <insert challenge name> challenge")
+
+
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+
+        //- This is how to add fonts
+        //- link(href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
+        //- This line to include the css is commented intentionally
+        //- uncomment it AFTER you finished writing semantic HTML
+        link(href="styles/index.scss" rel="stylesheet")
+
+
+    body
+        div.__container
+            div.__mobile-image
+                img(src="./assets/images/illustration-sign-up-mobile.svg")
+            div.__box
+                h1 Stay updated! 
+                h2 Join 60,000+ product managers receiving monthly updates on:
+                ul 
+                    li 
+                        img.__icon(src="./assets/images/icon-list.svg")
+                        h3 Product discovery and building what matters
+                    li 
+                        img.__icon(src="./assets/images/icon-list.svg")
+                        h3 Measuring to ensure updates are a success
+                    li 
+                        img.__icon(src="./assets/images/icon-list.svg")
+                        h3 And much more!
+                div.__group
+                    div.__emails
+                        p Email address
+                        p.__incorrect-email Invalid format
+                    input.__form(name='email', value="", type="email", placeholder="email@company.com")
+                a(href="../src/confirmation.pug").__btn Subscribe to monthly newsletter
+                script(src='../script.js')
+            div.__desktop-image 
+                img(src="./assets/images/illustration-sign-up-desktop.svg")
+

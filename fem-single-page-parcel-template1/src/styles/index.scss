@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --btn-color: hsl(40,0%,95%)
+}
+
+
+//Example component for buttons
+@layer components {
+    html {
+        @apply font-roboto bg-blue-900
+    }
+    h1 {
+        @apply text-5xl font-semibold w-[12ch]
+    }
+    h2 {
+        @apply w-[35ch] lg:w-[40ch]
+    }
+    h3 {
+        @apply w-[30ch] lg:w-auto
+    }
+    p {
+        @apply text-sm font-medium
+    }
+    ul {
+        @apply list-none space-y-3
+        /*flex flex-col justify-start list-inside gap-2 list-image-[url('../assets/images/icon-list.svg')]*/
+    }
+    li {
+        @apply flex items-start lg:items-center;
+        
+    }
+    input{
+        @apply bg-white mt-2
+    }
+    .__desktop-image {
+        @apply hidden lg:block
+    }
+    .__mobile-image {
+        @apply flex justify-center visible lg:hidden
+    }
+    .__icon {
+        @apply mr-4
+    }
+    .__container{
+        @apply flex flex-col lg:flex-row mx-auto mt-10 lg:p-5 w-fit rounded-none lg:rounded-2xl overflow-hidden bg-white
+    }
+    .__box{
+        @apply flex flex-col justify-center items-start gap-6 p-5 lg:p-10 lg:pl-5
+    }
+    .__emails {
+        @apply flex justify-between
+    }
+    .__incorrect-email {
+        @apply text-red-500 hidden
+    }
+    .__confirmation-container{
+        @apply flex flex-col lg:flex-row mx-auto mt-10 lg:p-5 w-fit rounded-none lg:rounded-[2rem] overflow-hidden bg-white
+    }
+    .__confirmation-box{
+        @apply flex flex-col justify-start lg:justify-center overflow-hidden items-start gap-6 p-5 pt-36 lg:p-10 lg:pt-6 h-[90vh] lg:h-auto 
+    }
+    .__confirmation-text-gap {
+        @apply mb-4
+    }
+    .__form {
+        @apply w-full h-14 pl-5 border-black border-[1px] rounded-lg
+    }
+    .__group {
+        @apply w-full mt-4
+    }
+    .__confirmation-icon {
+        @apply mb-4
+    }
+    .__btn {
+      @apply flex justify-center items-center mt-auto lg:mt-0
+        w-full h-14
+        px-6 py-3 
+        font-normal
+        rounded-lg
+    
+        bg-blue-950 cursor-pointer  text-white
+        
+        hover:bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:shadow-2xl
+        cursor-pointer
+        ;  
+
+    }
+    
+}
+
+// This is how to bring required fonts in
+// also see inclusion of Google font link in the index.pug
+@layer utilities {
+    .font-roboto {
+        font-family: 'Roboto', sans-serif;
+    }
+}
